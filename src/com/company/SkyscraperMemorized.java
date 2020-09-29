@@ -3,7 +3,7 @@ package com.company;
 import java.util.*;
 
 public class SkyscraperMemorized {
-
+    private static boolean showTiming = true;
     private ArrayList<Integer> fakeFloorNumbers = new ArrayList<>();
 
     public SkyscraperMemorized(int numberOfRealFloors){
@@ -17,10 +17,20 @@ public class SkyscraperMemorized {
     }
 
     public int toRealFloor(int fakeFloor){
-        return fakeFloorNumbers.indexOf(fakeFloor) +1;
+        var startTime = System.nanoTime();
+        var result = fakeFloorNumbers.indexOf(fakeFloor) +1;
+        var takenTime = System.nanoTime() - startTime;
+        if(showTiming)
+        System.out.println("fake floor TIME (ns): " + takenTime);
+        return result;
     }
 
     public int toFakeFloor(int realFloor){
-        return fakeFloorNumbers.get(realFloor-1);
+        var startTime = System.nanoTime();
+        var result = fakeFloorNumbers.get(realFloor-1);
+        var takenTime = System.nanoTime() - startTime;
+        if(showTiming)
+            System.out.println("real floor TIME (ns): " + takenTime);
+        return result;
     }
 }
