@@ -7,6 +7,6 @@ public class Main {
             name("Mannen")
             .build();
 
-	    LuckySkyscraper.floorList(200);
+	    LuckySkyscraper.floorList(100);
     }
 }
