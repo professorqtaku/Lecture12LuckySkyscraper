@@ -7,7 +7,7 @@ public class Main {
             name("Mannen")
             .build();
 
-        System.out.println("yo");
+        System.out.println("yo!");
         System.out.println(mannen.toRealFloor(15));
         System.out.println(SolutionFromLecture.toRealFloor(15));
         for(var floor = 1; floor <= 220; floor++){
