@@ -4,7 +4,7 @@ public class SolutionFromLecture {
 
     static public int toFakeFloor(int realFloorGoal){
         var fakeFloor = 1;
-        for(var realFloor = 1; realFloor <= realFloorGoal; realFloor++){
+        for(var realFloor = 1; realFloor < realFloorGoal; realFloor++){
             do {
                 fakeFloor++;
             } while(fakeFloor % 10 == 4 || fakeFloor % 100 == 13);
